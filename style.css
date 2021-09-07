@@ -9,7 +9,7 @@ body {
     height: 100vh;
 }
 :root {
-    --background: #031e11;
+    --background: #300a24;
 }
 @media (min-width: 800px) {
     :root {
