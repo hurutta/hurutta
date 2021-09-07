@@ -16,5 +16,24 @@
           greetings: 'My First Web Terminal'
       });
       </script>
+      
+      $('body').terminal({
+          cat: function() {
+              this.echo($('<img src="https://placekitten.com/408/287">'));
+          }
+      });
+      
+      $('body').terminal({
+          cat: function(width, height) {
+              const img = $('<img src="https://placekitten.com/' +
+                            width + '/' + height + '">');
+              img.on('load', this.resume);
+              this.pause();
+              this.echo(img);
+          }
+      }, {
+          greetings: 'My First Terminal\n'
+      });
+      
 </body>
 </html>
