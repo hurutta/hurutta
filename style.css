@@ -27,16 +27,7 @@ body {
 }
 /* flicker animation taken from http://goonhub.com/secret */
 .flicker {
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background: rgba(18, 16, 16, 0.2);
-    opacity: 0;
-    z-index: 1000;
-    pointer-events: none;
-    animation: flicker 0.12s infinite;
+    
 }
 @keyframes flicker {
   0% {
