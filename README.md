@@ -1,5 +1,5 @@
 ### Hi there 👋
-testing tesing
+https://hurutta.github.io/
 <!--
 **hurutta/hurutta** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
