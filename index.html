@@ -3,7 +3,23 @@
 <head>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="https://unpkg.com/jquery.terminal/js/jquery.terminal.min.js"></script>
-<link rel="stylesheet" href="https://unpkg.com/jquery.terminal/css/jquery.terminal.min.css"/>
+<link rel="stylesheet" href="https://unpkg.com/jquery.terminal/css/jquery.terminal.min.css"/><link rel="stylesheet" href="style.css">
+<style type="text/css">
+        .terminal,
+        span,
+        .cmd,
+        div {
+            --color: rgba(255, 255, 255, 0.99);
+            background-color:#300a24;
+            --background: #11111;
+        }
+ 
+        .terminal,
+        span {
+            --size: 1.4;
+            
+        }
+    </style>
 </head>
 <body>
       <script>
@@ -11,30 +27,22 @@
           hello: function(what) {
               this.echo('Hello, ' + what +
                         '. Wellcome to this terminal.');
-          }
-      }, {
-          greetings: 'My First Web Terminal'
-      });
-      
-      
-      $('body').terminal({
-          cat: function() {
+          },
+          cat: function(what) {
               this.echo($('<img src="https://placekitten.com/408/287">'));
-          }
-      });
+          },
+		name: function(){ this.echo('Abid Mohammad Jawad');},
+      	mail: function(){ this.echo('abidmohammadjawad@gmail.com');},
+       	photo: function(){ this.echo($('<img src="https://i.pinimg.com/originals/c8/6c/d4/c86cd4795af2bd7a68cf11728ec0f917.jpg">'));},
+       	address: function(){ this.echo('Sreemangal');},
+      },
       
-      $('body').terminal({
-          cat: function(width, height) {
-              const img = $('<img src="https://placekitten.com/' +
-                            width + '/' + height + '">');
-              img.on('load', this.resume);
-              this.pause();
-              this.echo(img);
-          }
-      }, {
-          greetings: 'My First Terminal\n'
+      	
+      		
+       {
+          greetings: 'jawad:~$'
       });
       </script>
-      
+     
 </body>
 </html>
