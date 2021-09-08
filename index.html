@@ -5,46 +5,53 @@
 <title>JAWAD</title>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="https://unpkg.com/jquery.terminal/js/jquery.terminal.min.js"></script>
-<link rel="stylesheet" href="https://unpkg.com/jquery.terminal/css/jquery.terminal.min.css"/><link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://unpkg.com/jquery.terminal/css/jquery.terminal.min.css"/>
+<link rel="stylesheet" href="style.css">
 <style type="text/css">
-        .terminal,
-        span,
-        .cmd,
+		.terminal,span,.cmd,
         div {
             --color: rgba(255, 255, 255, 0.99);
             background-color:#300a24;
             --background: #11111;
-        }
- 
-        .terminal,
-        span {
-            --size: 1.4;
-            
-        }
-    </style>
+           
+        	}
+ 		.terminal,
+        span {--size: 1.2;}
+        .terminal{box-sizing:border-box;height:100%;width:50%}
+        
+</style>
 </head>
+
 <body>
-      <script>
-      $('body').terminal({
-          hello: function(what) {
-              this.echo('Hello, ' + what +
-                        '. Wellcome to this terminal.');
-          },
-          cat: function(what) {
-              this.echo($('<img src="https://placekitten.com/408/287">'));
-          },
-		name: function(){ this.echo('Abid Mohammad Jawad');},
-      	mail: function(){ this.echo('abidmohammadjawad@gmail.com');},
-       	photo: function(){ this.echo($('<img src="https://i.pinimg.com/originals/c8/6c/d4/c86cd4795af2bd7a68cf11728ec0f917.jpg">'));},
-       	address: function(){ this.echo('Sreemangal');},
-      },
+
+		<div class="split left"><script src='script.js'></script></div>
+
+<div class="split right">
+  <div class="centered">
+  
+  	
+
+    <img src="https://i.pinimg.com/originals/c8/6c/d4/c86cd4795af2bd7a68cf11728ec0f917.jpg">
+    <tt><h1>ABID MOHAMMAD JAWAD</h1></tt>
+<pre>
+ ▄▄▄██▀▀▀▄▄▄       █     █░ ▄▄▄      ▓█████▄ 
+   ▒██  ▒████▄    ▓█░ █ ░█░▒████▄    ▒██▀ ██▌
+   ░██  ▒██  ▀█▄  ▒█░ █ ░█ ▒██  ▀█▄  ░██   █▌
+▓██▄██▓ ░██▄▄▄▄██ ░█░ █ ░█ ░██▄▄▄▄██ ░▓█▄   ▌
+ ▓███▒   ▓█   ▓██▒░░██▒██▓  ▓█   ▓██▒░▒████▓ 
+ ▒▓▒▒░   ▒▒   ▓▒█░░ ▓░▒ ▒   ▒▒   ▓▒█░ ▒▒▓  ▒ 
+ ▒ ░▒░    ▒   ▒▒ ░  ▒ ░ ░    ▒   ▒▒ ░ ░ ▒  ▒ 
+ ░ ░ ░    ░   ▒     ░   ░    ░   ▒    ░ ░  ░ 
+ ░   ░        ░  ░    ░          ░  ░   ░    
+                                      ░      
+                                      
+
+</pre>
+
+    <tt>welcome to my personal site, if you need any info, use the <u>termial</u> attached in the left margin</tt>
+  </div>
+</div>
       
-      	
-      		
-       {
-          greetings: 'jawad:~$'
-      });
-      </script>
      
 </body>
 </html>
