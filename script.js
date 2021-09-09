@@ -24,10 +24,48 @@
        	div: function(a,b){ this.echo(a/b);},
        	mod: function(a,b){ this.echo(a%b);},
        	git: function(){ this.echo('https://github.com/hurutta')},
-      },
-      
-      	
-      		
+       	
+       	
+       	
+       	weather: function(){ 
+       	const apiKey = "4d8fb5b93d4af21d66a2948710284366";
+       	let inputVal = 0;
+       	const url = `https://api.openweathermap.org/data/2.5/weather?q=${'sreemangal,bd'}&appid=${apiKey}&units=metric`;
+       	fetch(url).then(response => response.json()).then(data => {const {main,name,sys,weather}=data;
+      	this.echo("Location : "+name+"\t Temperature : "+Math.round(main.temp)+"°C \t"+weather[0]["description"]);
+      	});
+       	const url2 = `https://api.openweathermap.org/data/2.5/weather?q=${'dhaka,bd'}&appid=${apiKey}&units=metric`;
+       	fetch(url2).then(response => response.json()).then(data => {const {main,name,sys,weather}=data;
+      	this.echo("Location : "+name+"\t\t Temperature : "+Math.round(main.temp)+"°C \t"+weather[0]["description"]);
+      	});
+       	const url3 = `https://api.openweathermap.org/data/2.5/weather?q=${'sylhet,bd'}&appid=${apiKey}&units=metric`;
+       	fetch(url3).then(response => response.json()).then(data => {const {main,name,sys,weather}=data;
+      	this.echo("Location : "+"Sylhet"+"\t\t Temperature : "+Math.round(main.temp)+"°C \t"+weather[0]["description"]);
+      	});
+      	const url4 = `https://api.openweathermap.org/data/2.5/weather?q=${'chittagong,bd'}&appid=${apiKey}&units=metric`;
+       	fetch(url4).then(response => response.json()).then(data => {const {main,name,sys,weather}=data;
+      	this.echo("Location : "+name+"\t Temperature : "+Math.round(main.temp)+"°C \t"+weather[0]["description"]);
+      	});
+      	const url5 = `https://api.openweathermap.org/data/2.5/weather?q=${'khulna,bd'}&appid=${apiKey}&units=metric`;
+       	fetch(url5).then(response => response.json()).then(data => {const {main,name,sys,weather}=data;
+      	this.echo("Location : "+name+"\t\t Temperature : "+Math.round(main.temp)+"°C \t"+weather[0]["description"]);
+      	});
+      	const url6 = `https://api.openweathermap.org/data/2.5/weather?q=${'rajshahi,bd'}&appid=${apiKey}&units=metric`;
+       	fetch(url6).then(response => response.json()).then(data => {const {main,name,sys,weather}=data;
+      	this.echo("Location : "+name+"\t\t Temperature : "+Math.round(main.temp)+"°C \t"+weather[0]["description"]);
+      	});
+       	},
+       	
+       	
+       	pacman: function(){this.echo($('<img src="https://i.imgur.com/xEVKclT.gif" width=100% height=30px>'));},
+       	ip: function(){
+		fetch('https://api.ipify.org/?format=json').then(res => res.json()).then((out) => {
+        this.echo('your ip address : '+JSON.stringify(out, null, 0));});},
+        
+        
+       	view: function() {this.echo('total view of this site : ');this.echo($('<img src="https://www.counter12.com/img-8Y8wZY7d2CCA6Ab2-50.gif">'));},
+       	
+      },	
        {
        
           greetings: 'WELCOME TO MY PERSONAL SITE, Type "help" (without quote) to know about more commands\njawad:~$'
