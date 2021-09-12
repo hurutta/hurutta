@@ -15,7 +15,8 @@
        	this.echo(current);},
        	cat: function() {this.echo($('<img src="https://placekitten.com/408/287"length=100 height=100>'));},
        	cj: function() {this.echo($('<img src="https://c.tenor.com/grK7jtRobfMAAAAS/grand-theft-auto-carl-johnson.gif"length=100 height=100>'));},
-       	ok: function(){ this.echo('ok');document.write("<b>okidoki</b>");},
+       	ok: function(){ this.echo('ok');document.write("<h1>okidoki</h1>");
+       			window.setTimeout(function () {window.location.reload();}, 500)},
        	pass: function(what){ if(what==123) this.echo('wow how do you know?');
        	else this.echo('WRONG PASSWORD');},
        	add: function(a,b){ this.echo(a+b);},
@@ -94,8 +95,33 @@
 				type: "post",
 				data: dt
 				}); 
-				this.echo("YOUR TEXT MESSAGE HAS BEEN SUCCESSFULLY SENT");  		
+				this.echo("YOUR TEXT MESSANGE HAS BEEN SUCCESSFULLY SENT");  		
        		},
+       		
+       	location: function(){ 
+       	
+		let gc = "https://maps.googleapis.com/maps/api/geocode/json?latlng=",
+		gk = "&key=AIzaSyAGUlxBFrsJbst5nEvwx3QfNOomE8Csrjc";
+	  	var address;
+	   if(navigator.geolocation) {
+		navigator.geolocation.getCurrentPosition(function(position){
+		  latitude = position.coords.latitude;
+		  longitude = position.coords.longitude;
+		  let g_url = gc+latitude+ "," +longitude+gk;
+		$.ajax({
+		  type: 'GET',url: g_url,cache: false,dataType: 'JSON',
+		  success: function (location) 
+		  {
+			address=""+location.results[0].address_components[2].long_name;
+			alert(address);
+		  }
+		  }); 
+		}); 
+	   }
+	   
+       	
+       	 },
+       	
        	
        	
        	
