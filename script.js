@@ -65,6 +65,40 @@
         
        	view: function() {this.echo('total view of this site : ');this.echo($('<img src="https://www.counter12.com/img-8Y8wZY7d2CCA6Ab2-50.gif">'));},
        	
+       	d: function(word){
+       			const url = "https://api.dictionaryapi.dev/api/v2/entries/en/";
+				const result = document.getElementById("result");
+				let input_word = word;
+				fetch(`${url}${input_word}`)
+					.then((response) => {return response.json();})
+						.then((data) => {
+						this.echo("PART OF SPEECH:\t"+data[0].meanings[0].partOfSpeech);
+						this.echo("\nDEFINITION:\t"+data[0].meanings[0].definitions[0].definition);
+						this.echo("\nEXAMPLE: "+data[0].meanings[0].definitions[0].example);
+						}).catch((error) => {
+			this.echo("Can't find or wrong input, search different word");
+		});
+		;},
+		
+       		matrix: function() {this.echo($('<img src="https://cdn140.picsart.com/321303280218201.gif?to=min&r=640"length=100% height=100%>'));},
+       		cat2: function() {this.echo($('<img src="https://i.imgur.com/K0aZ9ID.gif" "length=100% width=100%>'));},
+       		
+       	
+       		send: function(){
+       			var name = prompt("PLEASE ENTER YOUR NAME: ");
+       			var text = prompt("WRITE YOUR TEXT MESSAGE: ");
+       			
+       			var dt =  "&name="+name+"&message="+text;
+				request = $.ajax({
+				url: "https://script.google.com/macros/s/AKfycbwZ4TiqPsOnG8ViSZ8liG05gwV0Hxif4ODCijEJLyXUhpb1mZjMh419vOHz5OA7j9lMNQ/exec",
+				type: "post",
+				data: dt
+				}); 
+				this.echo("YOUR TEXT MESSAGE HAS BEEN SUCCESSFULLY SENT");  		
+       		},
+       	
+       	
+       	
       },	
        {
        
