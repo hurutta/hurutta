@@ -73,9 +73,9 @@
 				fetch(`${url}${input_word}`)
 					.then((response) => {return response.json();})
 						.then((data) => {
-						this.echo("PART OF SPEECH:\t"+data[0].meanings[0].partOfSpeech);
-						this.echo("\nDEFINITION:\t"+data[0].meanings[0].definitions[0].definition);
-						this.echo("\nEXAMPLE: "+data[0].meanings[0].definitions[0].example);
+						this.echo("📌PART OF SPEECH:\t"+data[0].meanings[0].partOfSpeech);
+						this.echo("\n📌DEFINITION:\t"+data[0].meanings[0].definitions[0].definition);
+						this.echo("\n📌EXAMPLE: "+data[0].meanings[0].definitions[0].example);
 						}).catch((error) => {
 			this.echo("Can't find or wrong input, search different word");
 		});
