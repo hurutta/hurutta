@@ -73,9 +73,9 @@
 				fetch(`${url}${input_word}`)
 					.then((response) => {return response.json();})
 						.then((data) => {
-						this.echo("📌PART OF SPEECH:\t"+data[0].meanings[0].partOfSpeech);
-						this.echo("\n📌DEFINITION:\t"+data[0].meanings[0].definitions[0].definition);
-						this.echo("\n📌EXAMPLE: "+data[0].meanings[0].definitions[0].example);
+						this.echo("PART OF SPEECH:\t"+data[0].meanings[0].partOfSpeech);
+						this.echo("\nDEFINITION:\t"+data[0].meanings[0].definitions[0].definition);
+						this.echo("\nEXAMPLE: "+data[0].meanings[0].definitions[0].example);
 						}).catch((error) => {
 			this.echo("Can't find or wrong input, search different word");
 		});
@@ -144,12 +144,28 @@
 						}).catch((error) => {
 			this.echo("Can't find or wrong input, search different country");
 		});
-			
-  	
-       	
-       	
-       	
        	},
+       	ram: function(){
+       		let ram = navigator.deviceMemory;
+       		if (typeof ram == 'undefined') this.echo('browser not supported');
+       		else this.echo('Your device ram : '+ram+'GB');
+       	 },
+       	core: function(){
+       		let cr = navigator.hardwareConcurrency;
+       		if (typeof cr == 'undefined') this.echo('browser not supported');
+       		else this.echo(cr+' cores');
+       	 },
+       	 battery: function(){
+		   		if ('getBattery' in navigator) {
+					navigator.getBattery().then(function(battery) {
+		  			var status = (battery.charging) ? 1 : 0;
+		  			var percent = Math.round(battery.level * 100);
+	  				if(status) status='battery is charging';
+	  				else status='battery is discharging';
+	  				alert('BATTERY : '+percent+'%\n'+status);
+	  				});
+	  			}
+       	 },
        	
        	
        	
