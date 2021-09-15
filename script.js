@@ -118,10 +118,38 @@
 		  }); 
 		}); 
 	   }
-	   
-       	
        	 },
+       	country: function(name){ 
+       		var url = "https://restcountries.eu/rest/v2/name/";
+  			var countryName = "bangladesh";
+    		
+				const result = document.getElementById("result");
+				let input_word = name;
+				fetch(`${url}${input_word}`)
+					.then((response) => {return response.json();})
+						.then((data) => {
+						this.echo("NAME:\t"+data[0].name);
+						this.echo("capital:\t"+data[0].capital);
+						this.echo("topLevelDomain:\t"+data[0].topLevelDomain);
+						this.echo("callingCodes:\t"+data[0].callingCodes);
+						this.echo("region:\t"+data[0].region);
+						this.echo("population:\t"+data[0].population);
+						this.echo("area:\t"+data[0].area);
+						this.echo("timezones:\t"+data[0].timezones);
+						this.echo("borders:\t"+data[0].borders);
+						this.echo("currencies:\t"+data[0].currencies[0].code+" "+data[0].currencies[0].symbol);
+						this.echo("languages:\t"+data[0].languages[0].nativeName);
+						var flag=data[0].flag;
+						this.echo($('<img src="'+flag+'"length=100 height=100>'));
+						}).catch((error) => {
+			this.echo("Can't find or wrong input, search different country");
+		});
+			
+  	
        	
+       	
+       	
+       	},
        	
        	
        	
