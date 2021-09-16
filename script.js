@@ -166,8 +166,10 @@
 	  				});
 	  			}
        	 },
-       	
-       	
+		
+		os: function(){ this.echo(navigator.platform)},       	
+       	screen: function(){ this.echo('width : '+window.screen.width+'\theight : '+window.screen.height
+       	+'\tcolor depth : '+window.screen.colorDepth)}, 
        	
       },	
        {
