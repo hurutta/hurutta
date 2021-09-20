@@ -33,11 +33,3 @@
   width: 150px;
   border-radius: 50%;
 }
-
-@import url("https://fonts.googleapis.com/css2?family=Turret+Road:wght@500&display=swap");
-.h1 {
-  margin: auto;
-  font-family: "Turret Road", sans-serif;
-  font-size: 3vw;
-  text-transform: uppercase;
-}
