@@ -6,30 +6,36 @@
   z-index: 1;
   top: 0;
   overflow-x: hidden;
-  padding-top: 20px;
+  
 }
 
 .left 
 {
   left: 0;
   opacity: 1.0;
+  background-color: #300a24;
 }
 
 
-.right { right: 0; background-color: white;}
+.right { right: 0; }
 
 .centered 
 {
   position: absolute;
-  top: 50%;
+  top: 40%;
+  
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  background-color: white;
 }
+
 
 .centered img 
 {
   width: 150px;
   border-radius: 50%;
 }
+
+
+
+
