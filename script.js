@@ -1,7 +1,29 @@
  $('div').terminal(
  {
-        help: function(){ this.echo('this is an interactive site, type "list" to see full command list');},
-	list: function(){ this.echo('"name","mail","phone","photo","linked-in","address","cat", "time", "cj"');},
+        help: function(){ this.echo('this is an interactive site, type "list" to see full command list 📜');},
+	list: function(){ this.echo('   |── "name"\t\t\t\t   |── "mail"\n   |── "phone"\t\t\t\t   |── "photo"\n   |── "linkedin"\t\t\t   |── "address"\n');
+	this.echo('💡Just type any keyword from above to know that information.'); 
+	this.echo('💥To discover more exciting commands, type "list2"');
+	},
+	
+	list2: function(){ this.echo('😎 Thanks for showing interest! Heres the list2 -');
+	this.echo('   |── "time"\t\t\t\t   |── "weather"\n   |── "screen"\t\t\t\t   |── "location"\n   |── "os"\t\t\t\t\t   |── "battery"\n   |── "core"\t\t\t\t   |── "ram"\n   |── "pacman"\t\t\t\t   |── "view"\n   |── "cj"\t\t\t\t\t   |── "cat"\n');
+	this.echo('💥To discover more educative and interesting commands, type "list3" !!!'); 
+	this.echo('<p style="color:red;">'+"WOWOWOW"+'</p>',
+     { raw:true,
+       finalize: function(div) {
+          div
+         
+         .css("text-align", "right")
+         .css("margin-top", "-1em")
+         .css("font-family", "courier")
+         .css("text-color", "red")
+         ;
+       }
+     });
+	},
+	
+	
 	 
         hi: function(name) {this.echo('Hi, ' + name +'. Wellcome to my site.');},
 		name: function(){ this.echo('Abid Mohammad Jawad\nআবিদ মোহাম্মদ জাওয়াদ');},
@@ -27,7 +49,14 @@
        	div: function(a,b){ this.echo(a/b);},
        	mod: function(a,b){ this.echo(a%b);},
        	git: function(){ this.echo('https://github.com/hurutta')},
-       	
+       	open: function() {
+        this.echo('you try to open').exec('close');
+        setTimeout(function(){ alert("After 5 seconds!"); }, 5000);
+        this.echo('you try to open').exec('close');
+    },
+    close: function() {
+        this.echo('you closed');
+    },
        	
        	
        	weather: function(){ 
@@ -88,7 +117,9 @@
        		
        	
        		send: function(){
-       			var name = prompt("PLEASE ENTER YOUR NAME: ");
+       		
+       			
+       			var name = prompt("PLEASE ENTER YOUR NAME or MAIL-ID: \n(as your wish/so that you can send anything effortlessly :D)");
        			var text = prompt("WRITE YOUR TEXT MESSAGE: ");
        			
        			var dt =  "&name="+name+"&message="+text;
@@ -97,7 +128,7 @@
 				type: "post",
 				data: dt
 				}); 
-				this.echo("YOUR TEXT MESSANGE HAS BEEN SUCCESSFULLY SENT");  		
+				this.echo("🎉🎉🎉 YOUR TEXT MESSANGE HAS BEEN SUCCESSFULLY SENT 🎉🎉🎉\nbtw if you need any feedback, I need your mail-id, right? Did you write that when it was promt? 🤔😕😃");  		
        		},
        		
        	location: function(){ 
@@ -171,11 +202,15 @@
 		
 		os: function(){ this.echo(navigator.platform)},       	
        	screen: function(){ this.echo('width : '+window.screen.width+'\theight : '+window.screen.height
-       	+'\tcolor depth : '+window.screen.colorDepth)}, 
+       	+'\tcolor depth : '+window.screen.colorDepth)},
+       	 
        	
-      },	
+      },
+      	
        {
        
-          greetings: '👋 WELCOME TO MY PERSONAL SITE, Type "help" (without quote) to know about more commands\njawad:~$'
+          greetings: '👋 WELCOME TO MY PERSONAL SITE! Type "help" (without quote) to proceed. Need to contact me? just type "send".📨📬\njawad:~$'
           
       });
+      
+     
