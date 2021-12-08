@@ -176,6 +176,6 @@
       },	
        {
        
-          greetings: 'WELCOME TO MY PERSONAL SITE, Type "help" (without quote) to know about more commands\njawad:~$'
+          greetings: '👋 WELCOME TO MY PERSONAL SITE, Type "help" (without quote) to know about more commands\njawad:~$'
           
       });
