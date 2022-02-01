@@ -1,216 +1,214 @@
- $('div').terminal(
- {
-        help: function(){ this.echo('this is an interactive site, type "list" to see full command list 📜');},
-	list: function(){ this.echo('   |── "name"\t\t\t\t   |── "mail"\n   |── "phone"\t\t\t\t   |── "photo"\n   |── "linkedin"\t\t\t   |── "address"\n');
-	this.echo('💡Just type any keyword from above to know that information.'); 
-	this.echo('💥To discover more exciting commands, type "list2"');
-	},
-	
-	list2: function(){ this.echo('😎 Thanks for showing interest! Heres the list2 -');
-	this.echo('   |── "time"\t\t\t\t   |── "weather"\n   |── "screen"\t\t\t\t   |── "location"\n   |── "os"\t\t\t\t\t   |── "battery"\n   |── "core"\t\t\t\t   |── "ram"\n   |── "pacman"\t\t\t\t   |── "view"\n   |── "cj"\t\t\t\t\t   |── "cat"\n');
-	this.echo('💥To discover more educative and interesting commands, type "list3" !!!'); 
-	this.echo('<p style="color:red;">'+"WOWOWOW"+'</p>',
-     { raw:true,
-       finalize: function(div) {
-          div
-         
-         .css("text-align", "right")
-         .css("margin-top", "-1em")
-         .css("font-family", "courier")
-         .css("text-color", "red")
-         ;
-       }
-     });
-	},
-	
-	
-	 
-        hi: function(name) {this.echo('Hi, ' + name +'. Wellcome to my site.');},
-		name: function(){ this.echo('Abid Mohammad Jawad\nআবিদ মোহাম্মদ জাওয়াদ');},
-		nick: function(){ this.echo('JAWAD');},
-		nation: function(){ this.echo('BANGLADESH 🇧🇩️ বাংলাদেশ');},
-      	mail: function(){ this.echo('abidmohammadjawad@gmail.com');},
-      	email: function(){ this.echo('abidmohammadjawad@gmail.com');},
-       	photo: function(){ this.echo($('<img src="https://i.pinimg.com/originals/c8/6c/d4/c86cd4795af2bd7a68cf11728ec0f917.jpg" length=100 height=100>'));},
-       	address: function(){ this.echo('Sreemangal');},
-       	
-       	
-       	time: function(){ const current = new Date();const time = current.toLocaleTimeString("en-US");
-       	this.echo(current);},
-       	cat: function() {this.echo($('<img src="https://placekitten.com/408/287"length=100 height=100>'));},
-       	cj: function() {this.echo($('<img src="https://c.tenor.com/grK7jtRobfMAAAAS/grand-theft-auto-carl-johnson.gif"length=100 height=100>'));},
-       	ok: function(){ this.echo('ok');document.write("<h1>okidoki</h1>");
-       			window.setTimeout(function () {window.location.reload();}, 500)},
-       	pass: function(what){ if(what==123) this.echo('wow how do you know?');
-       	else this.echo('WRONG PASSWORD');},
-       	add: function(a,b){ this.echo(a+b);},
-       	sub: function(a,b){ this.echo(a-b);},
-       	mul: function(a,b){ this.echo(a*b);},
-       	div: function(a,b){ this.echo(a/b);},
-       	mod: function(a,b){ this.echo(a%b);},
-       	git: function(){ this.echo('https://github.com/hurutta')},
-       	open: function() {
-        this.echo('you try to open').exec('close');
-        setTimeout(function(){ alert("After 5 seconds!"); }, 5000);
-        this.echo('you try to open').exec('close');
-    },
-    close: function() {
-        this.echo('you closed');
-    },
-       	
-       	
-       	weather: function(){ 
-       	const apiKey = "4d8fb5b93d4af21d66a2948710284366";
-       	let inputVal = 0;
-       	const url = `https://api.openweathermap.org/data/2.5/weather?q=${'sreemangal,bd'}&appid=${apiKey}&units=metric`;
-       	fetch(url).then(response => response.json()).then(data => {const {main,name,sys,weather}=data;
-      	this.echo("Location : "+name+"\t Temperature : "+Math.round(main.temp)+"°C \t"+weather[0]["description"]);
-      	});
-       	const url2 = `https://api.openweathermap.org/data/2.5/weather?q=${'dhaka,bd'}&appid=${apiKey}&units=metric`;
-       	fetch(url2).then(response => response.json()).then(data => {const {main,name,sys,weather}=data;
-      	this.echo("Location : "+name+"\t\t Temperature : "+Math.round(main.temp)+"°C \t"+weather[0]["description"]);
-      	});
-       	const url3 = `https://api.openweathermap.org/data/2.5/weather?q=${'sylhet,bd'}&appid=${apiKey}&units=metric`;
-       	fetch(url3).then(response => response.json()).then(data => {const {main,name,sys,weather}=data;
-      	this.echo("Location : "+"Sylhet"+"\t\t Temperature : "+Math.round(main.temp)+"°C \t"+weather[0]["description"]);
-      	});
-      	const url4 = `https://api.openweathermap.org/data/2.5/weather?q=${'chittagong,bd'}&appid=${apiKey}&units=metric`;
-       	fetch(url4).then(response => response.json()).then(data => {const {main,name,sys,weather}=data;
-      	this.echo("Location : "+name+"\t Temperature : "+Math.round(main.temp)+"°C \t"+weather[0]["description"]);
-      	});
-      	const url5 = `https://api.openweathermap.org/data/2.5/weather?q=${'khulna,bd'}&appid=${apiKey}&units=metric`;
-       	fetch(url5).then(response => response.json()).then(data => {const {main,name,sys,weather}=data;
-      	this.echo("Location : "+name+"\t\t Temperature : "+Math.round(main.temp)+"°C \t"+weather[0]["description"]);
-      	});
-      	const url6 = `https://api.openweathermap.org/data/2.5/weather?q=${'rajshahi,bd'}&appid=${apiKey}&units=metric`;
-       	fetch(url6).then(response => response.json()).then(data => {const {main,name,sys,weather}=data;
-      	this.echo("Location : "+name+"\t\t Temperature : "+Math.round(main.temp)+"°C \t"+weather[0]["description"]);
-      	});
-       	},
-       	
-       	
-       	pacman: function(){this.echo($('<img src="https://i.imgur.com/xEVKclT.gif" width=100% height=30px>'));},
-       	ip: function(){
-		fetch('https://api.ipify.org/?format=json').then(res => res.json()).then((out) => {
-        this.echo('your ip address : '+JSON.stringify(out, null, 0));});},
-        
-        
-       	view: function() {this.echo('total view of this site : ');this.echo($('<img src="https://www.counter12.com/img-8Y8wZY7d2CCA6Ab2-50.gif">'));},
-       	
-       	d: function(word){
-       			const url = "https://api.dictionaryapi.dev/api/v2/entries/en/";
-				const result = document.getElementById("result");
-				let input_word = word;
-				fetch(`${url}${input_word}`)
-					.then((response) => {return response.json();})
-						.then((data) => {
-						this.echo("PART OF SPEECH:\t"+data[0].meanings[0].partOfSpeech);
-						this.echo("\nDEFINITION:\t"+data[0].meanings[0].definitions[0].definition);
-						this.echo("\nEXAMPLE: "+data[0].meanings[0].definitions[0].example);
-						}).catch((error) => {
-			this.echo("Can't find or wrong input, search different word");
-		});
-		;},
-		
-       		matrix: function() {this.echo($('<img src="https://cdn140.picsart.com/321303280218201.gif?to=min&r=640"length=100% height=100%>'));},
-       		cat2: function() {this.echo($('<img src="https://i.imgur.com/K0aZ9ID.gif" "length=100% width=100%>'));},
-       		
-       	
-       		send: function(){
-       		
-       			
-       			var name = prompt("PLEASE ENTER YOUR NAME or MAIL-ID: \n(as your wish/so that you can send anything effortlessly :D)");
-       			var text = prompt("WRITE YOUR TEXT MESSAGE: ");
-       			
-       			var dt =  "&name="+name+"&message="+text;
-				request = $.ajax({
-				url: "https://script.google.com/macros/s/AKfycbwZ4TiqPsOnG8ViSZ8liG05gwV0Hxif4ODCijEJLyXUhpb1mZjMh419vOHz5OA7j9lMNQ/exec",
-				type: "post",
-				data: dt
-				}); 
-				this.echo("🎉🎉🎉 YOUR TEXT MESSANGE HAS BEEN SUCCESSFULLY SENT 🎉🎉🎉\nbtw if you need any feedback, I need your mail-id, right? Did you write that when it was promt? 🤔😕😃");  		
-       		},
-       		
-       	location: function(){ 
-       	
-		let gc = "https://maps.googleapis.com/maps/api/geocode/json?latlng=",
-		gk = "&key=AIzaSyAGUlxBFrsJbst5nEvwx3QfNOomE8Csrjc";
-	  	var address;
-	   if(navigator.geolocation) {
-		navigator.geolocation.getCurrentPosition(function(position){
-		  latitude = position.coords.latitude;
-		  longitude = position.coords.longitude;
-		  let g_url = gc+latitude+ "," +longitude+gk;
-		$.ajax({
-		  type: 'GET',url: g_url,cache: false,dataType: 'JSON',
-		  success: function (location) 
-		  {
-			address=""+location.results[0].address_components[2].long_name;
-			alert(address);
-		  }
-		  }); 
-		}); 
-	   }
-       	 },
-       	country: function(name){ 
-       		var url = "https://restcountries.eu/rest/v2/name/";
-  			var countryName = "bangladesh";
-    		
-				const result = document.getElementById("result");
-				let input_word = name;
-				fetch(`${url}${input_word}`)
-					.then((response) => {return response.json();})
-						.then((data) => {
-						this.echo("NAME:\t"+data[0].name);
-						this.echo("capital:\t"+data[0].capital);
-						this.echo("topLevelDomain:\t"+data[0].topLevelDomain);
-						this.echo("callingCodes:\t"+data[0].callingCodes);
-						this.echo("region:\t"+data[0].region);
-						this.echo("population:\t"+data[0].population);
-						this.echo("area:\t"+data[0].area);
-						this.echo("timezones:\t"+data[0].timezones);
-						this.echo("borders:\t"+data[0].borders);
-						this.echo("currencies:\t"+data[0].currencies[0].code+" "+data[0].currencies[0].symbol);
-						this.echo("languages:\t"+data[0].languages[0].nativeName);
-						var flag=data[0].flag;
-						this.echo($('<img src="'+flag+'"length=100 height=100>'));
-						}).catch((error) => {
-			this.echo("Can't find or wrong input, search different country");
-		});
-       	},
-       	ram: function(){
-       		let ram = navigator.deviceMemory;
-       		if (typeof ram == 'undefined') this.echo('browser not supported');
-       		else this.echo('Your device ram : '+ram+'GB');
-       	 },
-       	core: function(){
-       		let cr = navigator.hardwareConcurrency;
-       		if (typeof cr == 'undefined') this.echo('browser not supported');
-       		else this.echo(cr+' cores');
-       	 },
-       	 battery: function(){
-		   		if ('getBattery' in navigator) {
-					navigator.getBattery().then(function(battery) {
-		  			var status = (battery.charging) ? 1 : 0;
-		  			var percent = Math.round(battery.level * 100);
-	  				if(status) status='battery is charging';
-	  				else status='battery is discharging';
-	  				alert('BATTERY : '+percent+'%\n'+status);
-	  				});
-	  			}
-       	 },
-		
-		os: function(){ this.echo(navigator.platform)},       	
-       	screen: function(){ this.echo('width : '+window.screen.width+'\theight : '+window.screen.height
-       	+'\tcolor depth : '+window.screen.colorDepth)},
-       	 
-       	
-      },
-      	
-       {
-       
-          greetings: '👋 WELCOME TO MY PERSONAL SITE! Type "help" (without quote) to proceed. Need to contact me? just type "send".📨📬\njawad:~$'
-          
-      });
-      
-     
+/**
+ * Constants
+ */
+const TWO_PI = Math.PI * 2;
+
+/**
+ * Application Class
+ */
+class Application {
+  /**
+   * Application constructor
+   */
+  constructor() {
+    this.canvas = document.getElementById("canvas");
+    this.context = this.canvas.getContext("2d");
+    this.width = this.canvas.width = window.innerWidth;
+    this.height = this.canvas.height = window.innerHeight;
+    this.center = {
+      x: this.width / 2,
+      y: this.height / 2 };
+
+
+    this.circleContainers = [];
+
+    //Resize listener for the canvas to fill browser window dynamically
+    window.addEventListener('resize', () => this.resizeCanvas(), false);
+  }
+
+  /**
+   * Simple resize function. Reinitializes everything on the canvas while changing the width/height
+   */
+  resizeCanvas() {
+    this.width = this.canvas.width = window.innerWidth;
+    this.height = this.canvas.height = window.innerHeight;
+    this.center = {
+      x: this.width / 2,
+      y: this.height / 2 };
+
+
+    //Empty the previous container and fill it again with new CircleContainer objects
+    this.circleContainers = [];
+    this.initializeCircleContainers();
+  }
+
+  /**
+   * Create a number of CircleContainer objects based on the numberOfContainers variable
+   * @return void
+   */
+  initializeCircleContainers() {
+    for (let x = 0; x < this.width + 100; x += 100) {
+      for (let y = 0; y < this.height + 100; y += 100) {
+        //Initialize a new instance of the CircleContainer class
+        let circleContainer = new CircleContainer(this.context, x, y);
+
+        //Let the CircleContainer initialize it's children
+        circleContainer.initializeCircles();
+
+        //Add the container to our array of CircleContainer objects
+        this.circleContainers.push(circleContainer);
+      }
+    }
+  }
+
+  /**
+   * Updates the application and every child of the application
+   * @return void
+   */
+  update() {
+    for (let i = 0; i < this.circleContainers.length; i++) {
+      this.circleContainers[i].update();
+    }
+  }
+
+  /**
+   * Renders the application and every child of the application
+   * @return void
+   */
+  render() {
+    //Clear the entire canvas every render
+    this.context.clearRect(0, 0, this.width, this.height);
+
+    //Trigger the render function on every child element
+    for (let i = 0; i < this.circleContainers.length; i++) {
+      this.circleContainers[i].render();
+    }
+  }
+
+  /**
+   * Update and render the application at least 60 times a second
+   * @return void
+   */
+  loop() {
+    this.update();
+    this.render();
+
+    window.requestAnimationFrame(() => this.loop());
+  }}
+
+
+/**
+ * CircleContainer Class
+ */
+class CircleContainer {
+  /**
+   * CircleContainer constructor
+   * @param context - The context from the canvas object of the Application
+   * @param x
+   * @param y
+   */
+  constructor(context, x, y) {
+    this.context = context;
+    this.position = { x, y };
+
+    this.numberOfCircles = 19;
+    this.circles = [];
+
+    this.baseRadius = 20;
+    this.bounceRadius = 150;
+    this.singleSlice = TWO_PI / this.numberOfCircles;
+  }
+
+  /**
+   * Create a number of Circle objects based on the numberOfCircles variable
+   * @return void
+   */
+  initializeCircles() {
+    for (let i = 0; i < this.numberOfCircles; i++) {
+      this.circles.push(new Circle(this.position.x, this.position.y + Math.random(), this.baseRadius, this.bounceRadius, i * this.singleSlice));
+    }
+  }
+
+  /**
+   * Try to update the application at least 60 times a second
+   * @return void
+   */
+  update() {
+    for (let i = 0; i < this.numberOfCircles; i++) {
+      this.circles[i].update(this.context);
+    }
+  }
+
+  /**
+   * Try to render the application at least 60 times a second
+   * @return void
+   */
+  render() {
+    for (let i = 0; i < this.numberOfCircles; i++) {
+      this.circles[i].render(this.context);
+    }
+  }}
+
+
+/**
+ * Circle Class
+ */
+class Circle {
+  /**
+   * Circle constructor
+   * @param x - The horizontal position of this circle
+   * @param y - The vertical position of this circle
+   * @param baseRadius
+   * @param bounceRadius
+   * @param angleCircle
+   */
+  constructor(x, y, baseRadius, bounceRadius, angleCircle) {
+    this.basePosition = { x, y };
+    this.position = { x, y };
+    this.speed = 0.01;
+    this.baseSize = 10;
+    this.size = 10;
+    this.angle = x + y;
+    this.baseRadius = baseRadius;
+    this.bounceRadius = bounceRadius;
+    this.angleCircle = angleCircle;
+  }
+
+  /**
+   * Update the position of this object
+   * @return void
+   */
+  update() {
+    this.position.x = this.basePosition.x + Math.cos(this.angleCircle) * (Math.sin(this.angle + this.angleCircle) * this.bounceRadius + this.baseRadius);
+    this.position.y = this.basePosition.y + Math.sin(this.angleCircle) * (Math.sin(this.angle + this.angleCircle) * this.bounceRadius + this.baseRadius);
+    this.size = Math.cos(this.angle) * 8 + this.baseSize;
+
+    this.angle += this.speed;
+  }
+
+  /**
+   * Renders this Circle object on the canvas
+   * @param context - The context from the canvas object of the Application
+   * @return void
+   */
+  render(context) {
+    context.fillStyle = "hsl(195, 100%, " + this.size * 4 + "%)";
+    context.beginPath();
+    context.arc(this.position.x, this.position.y, this.size, 0, TWO_PI);
+    context.fill();
+  }}
+
+
+/**
+ * Onload function is executed whenever the page is done loading, initializes the application
+ */
+window.onload = function () {
+  //Create a new instance of the application
+  const application = new Application();
+
+  //Initialize the CircleContainer objects
+  application.initializeCircleContainers();
+
+  //Start the initial loop function for the first time
+  application.loop();
+};

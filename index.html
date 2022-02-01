@@ -1,117 +1,142 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" >
 <head>
-<link rel="icon" href="https://i.pinimg.com/originals/c8/6c/d4/c86cd4795af2bd7a68cf11728ec0f917.jpg">
+  <meta charset="UTF-8">
+  <link rel="icon" href="https://i.pinimg.com/originals/c8/6c/d4/c86cd4795af2bd7a68cf11728ec0f917.jpg">
 <title>JAWAD</title>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="https://unpkg.com/jquery.terminal/js/jquery.terminal.min.js"></script>
 <link rel="stylesheet" href="https://unpkg.com/jquery.terminal/css/jquery.terminal.min.css"/>
-<link rel="stylesheet" href="style.css">
-<style type="text/css">
-		.terminal,span,.cmd,
-        div {
-            --color: rgba(255, 255, 255, 0.99);
-            
-            --background: #11111;
-           
-        	}
- 		.terminal,
-        span {--size: 1.2;}
-        .terminal{box-sizing:border-box;height:100%;width:50%}
-        
-</style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mina:wght@400;700&display=swap" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="./style.css">
 
 
 
 </head>
 
+
+
 <body>
+<!-- partial:index.partial.html -->
+
+<canvas id="canvas"  style="position:fixed; top:0;left:0">Your browser doesn't support canvas </canvas>
 
 
-	<div class="split left"><script src='script.js'></script></div>
 
-<div class="split right">
 
-	<!--- background animation --->
-		  <link rel="stylesheet" href="./style2.css">
-		<!--Hey! This is the original version
-		of Simple CSS Waves-->
 
-		<div class="header">
 
-		<!--Content before waves-->
-		<div class="inner-header flex">
-		</div>
-
-		<!--Waves Container-->
-		<div>
-		<svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-		viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
-		<defs>
-		<path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
-		</defs>
-		<g class="parallax">
-		<use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
-		<use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
-		<use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
-		<use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
-		</g>
-		</svg>
-		</div>
-		<!--Waves end-->
-
-		</div>
-		<!--Header ends-->
-
-		<!--Content starts-->
-
-		<!--Content ends-->
-
- 	<!----------------------------------------------------------------------------------->
- 	
- 	
- 	
-  <div class="centered">
-	<!--------------------------------------- image ------------------------------------->
-	<link rel="stylesheet" href="./style3.css">
- 	<div class="container">
-	<div class="avatar">
-		<a href="https://github.com/hurutta/">
-		<img src="https://i.pinimg.com/originals/c8/6c/d4/c86cd4795af2bd7a68cf11728ec0f917.jpg" alt="Skytsunami"/>
-		</a>
-	</div>
-	</div>
-
-	<br>
     
-    <!--<h1 style="color:white;font-family: Consolas;  border: 2px solid powderblue;font-size:85%">Abid Mohammad Jawad</h1>-->
-<br><br>    
-<pre>
- ▄▄▄██▀▀▀▄▄▄       █     █░ ▄▄▄      ▓█████▄ 
-   ▒██  ▒████▄    ▓█░ █ ░█░▒████▄    ▒██▀ ██▌
-   ░██  ▒██  ▀█▄  ▒█░ █ ░█ ▒██  ▀█▄  ░██   █▌
-▓██▄██▓ ░██▄▄▄▄██ ░█░ █ ░█ ░██▄▄▄▄██ ░▓█▄   ▌
- ▓███▒   ▓█   ▓██▒░░██▒██▓  ▓█   ▓██▒░▒████▓ 
- ▒▓▒▒░   ▒▒   ▓▒█░░ ▓░▒ ▒   ▒▒   ▓▒█░ ▒▒▓  ▒ 
- ▒ ░▒░    ▒   ▒▒ ░  ▒ ░ ░    ▒   ▒▒ ░ ░ ▒  ▒ 
- ░ ░ ░    ░   ▒     ░   ░    ░   ▒    ░ ░  ░ 
- ░   ░        ░  ░    ░          ░  ░   ░    
-                                      ░      
-                                      
-</pre>
-	
-      
-	
-	
+    <nav>
+    <span class="btn"> </span>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <tt><p class="clock" style="font-family: 'Mina', sans-serif;font-size: 0.8em;width: 5%position: fixed;width: 10px;"></p></tt>
+
+    <span style="justify-content: space-evenly;    display: flex;  align-items: right;width: 65%">
+    <font style="font-family: 'Mina', sans-serif;">আবিদ মোহাম্মদ জাওয়াদ</font>
+    </span>
+    <a href="#contact" style="right: 0;margin: auto;"></a>
+    <img src="https://www.counter12.com/img-8Y8wZY7d2CCA6Ab2-50.gif">
+    </nav>
+
+    <div class="center"><script src='script2.js'></script></div>
+
+
+
+
+
+
+    <script>
+        function clock() {// We create a new Date object and assign it to a variable called "time".
+var time = new Date(),
     
-  </div>
-  <p style="font-family: courier;margin: 20px;font-size: 80%;font-weight: bold;text-align: center;text-shadow: 0.3px 0.3px #ff0000;overflow: visible;">welcome to my personal site, if you need any info, use the <u>terminal</u> visible at the left margin. It's an interactive site, follow the instructions and get the information you're looking for 😃</p>
+    // Access the "getHours" method on the Date object with the dot accessor.
+    hours = time.getHours(),
+    
+    // Access the "getMinutes" method with the dot accessor.
+    minutes = time.getMinutes(),
+    
+    
+    seconds = time.getSeconds();
+
+document.querySelectorAll('.clock')[0].innerHTML = harold(hours) + ":" + harold(minutes) + ":" + harold(seconds);
+  
+  function harold(standIn) {
+    if (standIn < 10) {
+      standIn = '0' + standIn
+    }
+    return standIn;
+  }
+}
+setInterval(clock, 1000);
+</script>
 
 
-</div>
-      
-      <div><a href='https://www.counter12.com'><img src='https://www.counter12.com/img-8Y8wZY7d2CCA6Ab2-50.gif' border='0' alt='conter12'></a><script type='text/javascript' src='https://www.counter12.com/ad.js?id=8Y8wZY7d2CCA6Ab2'></script></div>
-     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- SVG Goo filter from: https://css-tricks.com/gooey-effect/ -->
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+
+    <defs>
+      <filter id="shadowed-goo">
+          
+          <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+          <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+          <feGaussianBlur in="goo" stdDeviation="3" result="shadow" />
+          <feColorMatrix in="shadow" mode="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 -0.2" result="shadow" />
+          <feOffset in="shadow" dx="1" dy="1" result="shadow" />
+          <feBlend in2="shadow" in="goo" result="goo" />
+          <feBlend in2="goo" in="SourceGraphic" result="mix" />
+      </filter>
+      <filter id="goo">
+          <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+          <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+          <feBlend in2="goo" in="SourceGraphic" result="mix" />
+      </filter>
+    </defs>
+</svg>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+
+
 </body>
 </html>
-<!- start building ~ 7 september 2021 ->
