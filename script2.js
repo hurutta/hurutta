@@ -153,7 +153,7 @@
 	   }
        	 },
        	country: function(name){ 
-       		var url = "https://restcountries.eu/rest/v2/name/";
+       		var url = "https://restcountries.com/v2/name/";
   			var countryName = "bangladesh";
     		
 				const result = document.getElementById("result");
@@ -203,7 +203,41 @@
 		os: function(){ this.echo(navigator.platform)},       	
        	screen: function(){ this.echo('width : '+window.screen.width+'\theight : '+window.screen.height
        	+'\tcolor depth : '+window.screen.colorDepth)},
-       	 
+       
+
+        dd: function(word)
+        { 
+            const url = "https://raw.githubusercontent.com/MinhasKamal/BengaliDictionary/master/BengaliDictionary.json";
+                const result = document.getElementById("result");
+                let input_word = word;
+                fetch(`${url}`)
+                    .then((response) => {return response.json();})
+                        .then((data) => {
+
+
+                        var index = -1;
+                        var val = word;
+                        var filteredObj = data.find(function(item, i){
+                          if(item.en === val){
+                            index = i;
+                            return i;
+                          }
+                        });
+                        this.echo("Bangla : "+filteredObj.bn);
+                        this.echo("Pronunciation : "+filteredObj.pron);
+                        this.echo(filteredObj.bn_syns);
+                        this.echo(filteredObj.en_syns);
+                        this.echo(filteredObj.sents);
+                        
+
+                        }).catch((error) => {
+            this.echo("Can't find or wrong input, search different word");
+        });
+
+
+        },
+
+
        	
       },
       	
