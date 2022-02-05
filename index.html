@@ -21,7 +21,7 @@
 
 
 
-<body>
+<body style="background-color: hsl(195, 100%, 7%)">
 <!-- partial:index.partial.html -->
 
 <canvas id="canvas"  style="position:fixed; top:0;left:0">Your browser doesn't support canvas </canvas>
@@ -33,7 +33,7 @@
 
     
     <nav>
-    <span class="btn"> </span>
+    <a href="https://github.com/hurutta"><span class="btn"> </span></a>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <tt><p class="clock" style="font-family: 'Mina', sans-serif;font-size: 0.8em;width: 5%position: fixed;width: 10px;"></p></tt>
 
@@ -48,23 +48,25 @@
 
 
 
+    		<link rel="preconnect" href="https://fonts.gstatic.com"> 
+			<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+            <button onclick = "gfg_Run()">
+            Change theme
+        	</button>
+
 
 
 
     <script>
         function clock() {// We create a new Date object and assign it to a variable called "time".
-var time = new Date(),
+		var time = new Date(),
+    	// Access the "getHours" method on the Date object with the dot accessor.
+    	hours = time.getHours(),
     
-    // Access the "getHours" method on the Date object with the dot accessor.
-    hours = time.getHours(),
-    
-    // Access the "getMinutes" method with the dot accessor.
-    minutes = time.getMinutes(),
-    
-    
-    seconds = time.getSeconds();
-
-document.querySelectorAll('.clock')[0].innerHTML = harold(hours) + ":" + harold(minutes) + ":" + harold(seconds);
+    	// Access the "getMinutes" method with the dot accessor.
+    	minutes = time.getMinutes(),
+    	seconds = time.getSeconds();
+		document.querySelectorAll('.clock')[0].innerHTML = harold(hours) + ":" + harold(minutes) + ":" + harold(seconds);
   
   function harold(standIn) {
     if (standIn < 10) {
@@ -74,6 +76,14 @@ document.querySelectorAll('.clock')[0].innerHTML = harold(hours) + ":" + harold(
   }
 }
 setInterval(clock, 1000);
+var pos = 0;
+function gfg_Run() 
+{
+	const color = ["#232323","white","#673AB7","#009688","black","hsl(195, 100%, 7%)"];
+	document.body.style.backgroundColor = color[pos];
+	pos++;
+	if(pos>5) pos=0;
+} 
 </script>
 
 

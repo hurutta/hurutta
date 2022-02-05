@@ -23,12 +23,16 @@
      });
 	},
 	
+  list3: function(){ this.echo('   |── "country" `anything`\t\t   |── "add" `a` `b`\n   |── "d" `anyword`\t\t\t   |── "sub" `a` `b`\n   |── "dd" `anyword`\t\t\t   |── "div" `a` `b`\n');
+  this.echo('💡Just type any keyword from above to know that information.'); 
+  this.echo('💥To discover more exciting commands, type "list3"');
+  },
 	
 	 
         hi: function(name) {this.echo('Hi, ' + name +'. Wellcome to my site.');},
-		name: function(){ this.echo('Abid Mohammad Jawad\nআবিদ মোহাম্মদ জাওয়াদ');},
-		nick: function(){ this.echo('JAWAD');},
-		nation: function(){ this.echo('BANGLADESH 🇧🇩️ বাংলাদেশ');},
+		    name: function(){ this.echo('Abid Mohammad Jawad\nআবিদ মোহাম্মদ জাওয়াদ');},
+		    nick: function(){ this.echo('JAWAD');},
+		    nation: function(){ this.echo('BANGLADESH 🇧🇩️ বাংলাদেশ');},
       	mail: function(){ this.echo('abidmohammadjawad@gmail.com');},
       	email: function(){ this.echo('abidmohammadjawad@gmail.com');},
        	photo: function(){ this.echo($('<img src="https://i.pinimg.com/originals/c8/6c/d4/c86cd4795af2bd7a68cf11728ec0f917.jpg" length=100 height=100>'));},
@@ -243,8 +247,10 @@
       	
        {
        
+      
           greetings: '👋 WELCOME TO MY PERSONAL SITE! Type "help" (without quote) to proceed. Need to contact me? just type "send".📨📬\njawad:~$'
           
+
       });
       
      
