@@ -242,6 +242,16 @@
         });
         },
 
+
+
+
+        salat: function(){ 
+          this.echo('Calc method : Mecca - Umm al-Qura, Juristic method : Hanafi');
+          this.echo('<iframe src="https://timesprayer.com/widgets.php?frame=1&amp;lang=en&amp;name=dhaka&amp;avachang=true&amp;asr=1" style="border: none; overflow: hidden; width: 100%; height: 175px;"></iframe>',
+         { raw:true,
+        finalize: function(div) {}});
+        },
+
         net: function() {
         this.echo('').exec('speed');
         },
@@ -266,7 +276,90 @@
         finalize: function(div) {}});
         },
 
+        calculator: function(){ 
+          this.echo('<iframe src="https://www.desmos.com/testing/virginia/scientific" width="650" height="400"></iframe>',
+         { raw:true,
+        finalize: function(div) {}});
+        },
        	
+        graph: function(){ 
+          this.echo('<iframe src="https://www.desmos.com/calculator/g7izucn6nn" width="100%" style="min-height:300px"></iframe>',
+         { raw:true,
+        finalize: function(div) {}});
+        },
+
+        football: function(){ 
+          this.echo('<div id="scoreaxis-widget-10766" style="border-width:0px;border-color:rgba(0, 0, 0, 0.15);border-style:solid;border-radius:8px;padding:10px;background:rgb(255, 255, 255);width:95%" data-reactroot=""><iframe id="Iframe" src="https://www.scoreaxis.com/widget/standings-widget/8?links=1&amp;removeBorders=1&amp;widgetHomeAwayTabs=1&amp;inst=10766" style="width:100%;border:none;transition:all 300ms ease"></iframe><script>window.addEventListener("DOMContentLoaded",event=>{window.addEventListener("message",event=>{if(event.data.appHeight&&"10766"==event.data.inst){let container=document.querySelector("#scoreaxis-widget-10766 iframe");container&&(container.style.height=parseInt(event.data.appHeight)+"px")}},!1)});</script></div>',
+         { raw:true,
+        finalize: function(div) {}}).exec('football2');
+        },
+        football2: function(){ 
+          this.echo('<div id="scoreaxis-widget-881ce" style="border-width:0px;border-color:rgba(0, 0, 0, 0.15);border-style:solid;border-radius:8px;padding:10px;background:rgb(255, 255, 255);width:95%" data-reactroot=""><iframe id="Iframe" src="https://www.scoreaxis.com/widget/standings-widget/564?links=1&amp;removeBorders=1&amp;widgetHomeAwayTabs=1&amp;inst=881ce" style="width:100%;border:none;transition:all 300ms ease"></iframe><script>window.addEventListener("DOMContentLoaded",event=>{window.addEventListener("message",event=>{if(event.data.appHeight&&"881ce"==event.data.inst){let container=document.querySelector("#scoreaxis-widget-881ce iframe");container&&(container.style.height=parseInt(event.data.appHeight)+"px")}},!1)});</script></div>',
+         { raw:true,
+        finalize: function(div) {}});
+        },
+
+        timer: function(){ 
+          this.echo('<iframe style="background-color:white;width:650px;height:190px" src="https://beepmyclock.com/widget/timer" frameborder="0" style="border:0;height:175px;"></iframe>',
+         { raw:true,
+        finalize: function(div) {}});
+        },
+        stopwatch: function(){ 
+          this.echo(' <iframe src="https://beepmyclock.com/widget/stopwatch" frameborder="0" style="border:0;width:650px;height:175px;"></iframe>',
+         { raw:true,
+        finalize: function(div) {}});
+        },
+
+        pacman: function(){ 
+          this.echo('press `shift` then `enter`');
+          this.echo('<div><iframe src="https://www.retrogames.cc/embed/9409-pac-man-plus.html" width="500" height="350" frameborder="no" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" scrolling="no"></iframe></div>',
+         { raw:true,
+        finalize: function(div) {}});
+        },
+
+        chat: function(){ 
+          this.echo('<div><iframe src="https://textweb.herokuapp.com/" width="650" height="350"></iframe></div>',
+         { raw:true,
+        finalize: function(div) {}});
+        },
+
+        currency: function(){ 
+          this.echo('<iframe width="650" height="280" src="https://www.cashbackforex.com/en/widgets/currency-converter"></iframe>',
+         { raw:true,
+        finalize: function(div) {}});
+        },
+
+        moon: function(){ 
+          this.echo('<!-- // Begin Current Moon Phase HTML (c) MoonConnection.com // --><table cellpadding="0" cellspacing="0" border="0" width="212"><tr><td align="center"><a href="https://www.moonconnection.com" target="mc_moon_ph"><img src="https://www.moonmodule.com/cs/dm/hn.gif" width="350" height="200" border="0" alt="" /></a><div style="position:relative;width:200px;"><div style="position:absolute;top:-20px;left:6px;background:#000000;width:116px;text-align:center;"><a href="https://www.moonconnection.com/moon_cycle.phtml" target="mc_moon_ph"><font color="#7F7F7F" size="1" face="arial,helvetica,sans-serif"><span style="color:#7F7F7F;font-family:arial,helvetica,sans-serif;font-size:10px;">moon cycles</span></a></font></div></div></td></tr></table><!-- // end moon phase HTML // -->',
+         { raw:true,
+        finalize: function(div) {}});
+        },
+
+        calender: function(){ 
+          this.echo('<iframe src="https://calendar.google.com/calendar/embed?height=350&wkst=7&bgcolor=%23ffffff&ctz=Asia%2FDhaka&hl=bn&title=%E0%A6%95%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B2%E0%A7%87%E0%A6%A8%E0%A7%8D%E0%A6%A1%E0%A6%BE%E0%A6%B0%20&src=ZW4uYmQjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&src=ZW4uaXNsYW1pYyNob2xpZGF5QGdyb3VwLnYuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=aHQzamxmYWFjNWxmZDYyNjN1bGZoNHRxbDhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%230B8043&color=%234285F4&color=%23B39DDB" style="border-width:0" width="660" height="350" frameborder="0" scrolling="no"></iframe>',
+         { raw:true,
+        finalize: function(div) {}});
+        },
+
+         wiki: function(){ 
+          this.echo('<iframe width="660px" height="350px" id="wiki" src="https://bn.m.wikipedia.org/wiki/%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%A7%E0%A6%BE%E0%A6%A8_%E0%A6%AA%E0%A6%BE%E0%A6%A4%E0%A6%BE"></iframe>',
+         { raw:true,
+        finalize: function(div) {}});
+        },
+
+        windows: function(){ 
+          this.echo('<div><iframe src="https://98.js.org/" width="660" height="355"></iframe></div>',
+         { raw:true,
+        finalize: function(div) {}});
+        },
+        radio: function(){ 
+          this.echo('<iframe scrolling="no" width="300" src="http://www.chonnochara.com/radio-foorti-88-0/#rachonnochara"></iframe></br><strong>radio-foorti-88-0</strong>',
+         { raw:true,
+        finalize: function(div) {}});
+        },
+
+
+
       },
       	
        {
