@@ -353,10 +353,20 @@
         finalize: function(div) {}});
         },
         radio: function(){ 
-          this.echo('<iframe scrolling="no" width="300" src="http://www.chonnochara.com/radio-foorti-88-0/#rachonnochara"></iframe></br><strong>radio-foorti-88-0</strong>',
+          this.echo('<iframe src="https://tunein.com/embed/player/s122537/" style="width:100%; height:100px;" scrolling="no" frameborder="no"></iframe></br><strong>radio-foorti-88-0</strong>',
          { raw:true,
         finalize: function(div) {}});
         },
+        tv: function()
+        {
+            this.echo('type the name from the chart given below -<br><br><strong style="color:red;font-size:1.5em">somoy&nbsp;&nbsp;&nbsp;&nbsp;channeli&nbsp;&nbsp;&nbsp;&nbsp;rtv&nbsp;&nbsp;&nbsp;&nbsp;channel24&nbsp;&nbsp;&nbsp;&nbsp;gtv</strong>',
+            { raw:true, finalize: function(div) {}});
+        },
+        somoy : function() { this.echo('<iframe width="660" height="360" src="https://www.youtube.com/embed/b37nXCRrvW0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',{ raw:true,finalize: function(div) {}}); },
+        channeli : function() { this.echo('<iframe width="660" height="360" src="https://www.youtube.com/embed/gQNeEz9odtM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',{ raw:true,finalize: function(div) {}}); },
+        rtv : function() { this.echo('<iframe width="660" height="360" src="https://www.youtube.com/embed/Wne6AWA6xLI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',{ raw:true,finalize: function(div) {}}); },
+        channel24 : function() { this.echo('<iframe width="660" height="360" src="https://www.youtube.com/embed/FkJJG3jNvJs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',{ raw:true,finalize: function(div) {}}); },
+        gtv : function() { this.echo('<iframe width="660" height="360" src="https://www.youtube.com/embed/vSHelsYpvkc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',{ raw:true,finalize: function(div) {}}); },
 
 
 
